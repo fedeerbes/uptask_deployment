@@ -14,7 +14,7 @@ exports.createUser = async (req, res) => {
     await Users.create({ email, password });
 
     // create confirmation url
-    const confirmUrl = `${req.headers.host}/confirm/${email}`;
+    const confirmUrl = `http://${req.headers.host}/confirm/${email}`;
 
     // create user object
     const user = {
