@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    include partials/header
+  body.login
+    .contenedor-formulario
+      h1= pageTitle
+
+      if locals.messages
+        .alertas
+          each category in Object.keys(locals.messages)
+            each error in messages[category]
+              .alerta(class=`${category}`)
+                p= error
+
+      form#form.caja.caja-login(method="POST" action="/login")
+        .campo
+          label(for="email") Email:
+          input(type="email" name="email" placeholder="Email" required value= email)
+        .campo
+          label(for="password") Password:
+          input(type="password" name="password" placeholder="Password" required value= password)
+        .campo.enviar
+          input.boton(type="submit" value="Login")
+        .campo.acciones
+          a(href="/create-account") Sign Up instead
+          a(href="/reset-password") Forgot Password
+
+        

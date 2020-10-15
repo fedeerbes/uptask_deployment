@@ -1,0 +1,28 @@
+# OSX
+#
+.DS_Store
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignore test-related files
+/coverage.data
+/coverage/*
+.jest/*
+
+# env files
+.env
+
+# generated files
+bin/
+gen/
+src/gen/
+
+# NPM config files
+.npmrc
+
+# env
+variables.env

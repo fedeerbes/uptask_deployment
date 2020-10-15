@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    style
+      include ./email.css
+
+  body
+    h2 Confirm your UpTask account
+    p You're almost there, follow the next link to activate your account.
+    a(href=`${confirmUrl}`) Activate account
+    p If this link doesn't work, visit #{confirmUrl}
+    p If you didn't ask for a password change, ignore this email. 
